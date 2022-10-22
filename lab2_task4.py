@@ -1,8 +1,13 @@
 n = int(input())
 a = 1
 b = 1
-
-for i in range(n+1):
-    print(a)
-
-    a, b = b, a + b
+i = 0
+x = [1, 1]
+while i < n-2:
+    f = a + b
+    x.append(f)
+    a = b
+    b = f
+    i += 1
+print(''.join([str(i) for i in x]))
+    
